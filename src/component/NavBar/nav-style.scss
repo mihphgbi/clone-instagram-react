@@ -3,3 +3,13 @@
   margin-bottom: 19px;
   width: 100%
 }
+.menu-wrapper {
+  height: 100%;
+  width: 100%;
+}
+.menu-item {
+  &.MuiMenuItem-root {
+    padding: 12px;
+    margin-bottom: 2px;
+  }
+}
