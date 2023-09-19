@@ -1,15 +1,16 @@
 import {Fragment} from "react";
 import Nav from "../../component/NavBar/Nav";
 import {Grid} from "@mui/material";
+import "../Layout/layout.scss";
 
 function Layout (Component) {
     return (
         <Fragment>
-            <Grid container style={{height: '100%'}}>
-                <Grid container item xs={2} style={{height: '100%', padding: '8px 12px 20px', borderRight: '1px solid rgb(219,219,219)'}}>
+            <Grid container>
+                <Grid container className={'nav-wrapper'}>
                     <Nav/>
                 </Grid>
-                <Grid container item xs={10}>
+                <Grid container className={'component-wrapper'}>
                     <Component/>
                 </Grid>
             </Grid>
