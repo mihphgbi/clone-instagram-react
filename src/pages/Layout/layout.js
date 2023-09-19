@@ -5,7 +5,7 @@ import {Grid} from "@mui/material";
 function Layout (Component) {
     return (
         <Fragment>
-            <Grid container>
+            <Grid container style={{height: '100%'}}>
                 <Grid container item xs={2} style={{height: '100%', padding: '8px 12px 20px', borderRight: '1px solid rgb(219,219,219)'}}>
                     <Nav/>
                 </Grid>

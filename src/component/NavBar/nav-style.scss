@@ -1,7 +1,10 @@
+nav-wrapper {
+  height: 100%;
+}
 .logo-box {
   padding: 25px 12px 16px;
   margin-bottom: 19px;
-  width: 100%
+  width: 100%;
 }
 .menu-wrapper {
   height: 100%;
@@ -11,5 +14,25 @@
   &.MuiMenuItem-root {
     padding: 12px;
     margin-bottom: 2px;
+    align-items: center;
+
+    &.MuiMenuItem-root:hover {
+      background-color: rgba(0,0,0,0.05);
+      transition: background-color .3s;
+      border-radius: 8px;
+    }
+
+    &.Mui-selected {
+      background-color: transparent;
+      &.MuiTypography-root {
+        font-weight: 600;
+      }
+    }
+  }
+}
+.more-btn {
+  &.MuiButtonBase-root {
+    color: black;
+    text-transform: capitalize;
   }
 }
