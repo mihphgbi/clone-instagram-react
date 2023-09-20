@@ -26,7 +26,7 @@ function Nav () {
                         </a>
                     </Box>
                 </Grid>
-                <Grid container item xs={12}>
+                <Grid container item xs={12} className={'menu-container'}>
                     <MenuList className={'menu-wrapper'}>
                         <MenuItem className={'menu-item'} onClick={handleClick} selected={selectedItem}>
                             <ListItemIcon>
