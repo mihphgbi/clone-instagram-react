@@ -7,7 +7,7 @@ function Layout (Component) {
     return (
         <Fragment>
             <Grid container>
-                <Grid container className={'nav-wrapper'}>
+                <Grid container className={'nav-container'}>
                     <Nav/>
                 </Grid>
                 <Grid container className={'component-wrapper'}>

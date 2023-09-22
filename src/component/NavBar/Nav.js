@@ -1,6 +1,5 @@
 import React, {Fragment, useState} from 'react'
-import {connect} from "react-redux";
-import {Box, CardMedia, Grid, ListItemIcon, ListItemText, MenuItem, MenuList, Typography} from "@mui/material";
+import {Box, CardMedia, ListItemIcon, ListItemText, MenuItem, MenuList} from "@mui/material";
 import logo from "../../assets/logo.svg";
 import more_icon from "../../assets/more-icon.svg";
 //style
@@ -15,9 +14,9 @@ function Nav () {
     }
     return (
         <Fragment>
-            <Grid container>
-                <Grid container item xs={12}>
-                    <Box className={'logo-box'}>
+            <div className={'nav-wrapper'}>
+                <div className={'logo-box-container'}>
+                    <Box className={'logo-box-wrapper'}>
                         <a href={''}>
                             <CardMedia title={'logo'}
                                        image={logo}
@@ -25,8 +24,8 @@ function Nav () {
                                        sx={{width:'110px', height:'30px'}}/>
                         </a>
                     </Box>
-                </Grid>
-                <Grid container item xs={12} className={'menu-container'}>
+                </div>
+                <div className={'menu-container'}>
                     <MenuList className={'menu-wrapper'}>
                         <MenuItem className={'menu-item'} onClick={handleClick} selected={selectedItem}>
                             <ListItemIcon>
@@ -102,9 +101,9 @@ function Nav () {
                             <ListItemText>{NAV_MENU_ITEM.PROFILE.name}</ListItemText>
                         </MenuItem>
                     </MenuList>
-                </Grid>
-                <Grid container item xs={12}>
-                    <MenuList className={'menu-wrapper'}>
+                </div>
+                <div className={'more-option-container'}>
+                    <MenuList className={'menu-wrapper menu-more'}>
                         <MenuItem className={'menu-item'} onClick={handleClick} selected={selectedItem}>
                             <ListItemIcon>
                                 <CardMedia title={'Profile'}
@@ -114,10 +113,9 @@ function Nav () {
                             <ListItemText>More</ListItemText>
                         </MenuItem>
                     </MenuList>
-                </Grid>
-            </Grid>
+                </div>
+            </div>
         </Fragment>
     )
 }
-const mapStateToProps = (state) => {}
-export default connect (mapStateToProps,{})(Nav);
+export default Nav;

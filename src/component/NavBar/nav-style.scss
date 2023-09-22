@@ -1,8 +1,21 @@
-.logo-box {
+.nav-wrapper {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    flex-wrap: nowrap;
+}
+.logo-box-container {
+  height: 92px;
+}
+.logo-box-wrapper {
   padding: 25px 12px 16px;
   margin-bottom: 19px;
   width: 100%;
-  flex-shrink: 0;
+  &.MuiGrid-root {
+    flex: none;
+  }
 }
 .logo-img {
   &.MuiCardMedia-root {
@@ -12,13 +25,19 @@
   }
 }
 .menu-container {
-  &.MuiGrid-root {
-    flex-grow: 1;
-    display: block;
-  }
+    flex: 1;
 }
 .menu-wrapper {
   width: 100%;
+  &.menu-more {
+    &.MuiList-root {
+      padding: 0;
+      height: 56px;
+      .MuiMenuItem-root {
+        margin: 0;
+      }
+    }
+  }
 }
 .menu-item {
   &.MuiMenuItem-root {
@@ -35,7 +54,7 @@
 
     &.Mui-selected {
       background-color: transparent;
-      &.MuiTypography-root {
+      .MuiTypography-root {
         font-weight: 600;
       }
     }
@@ -50,9 +69,6 @@
     }
   }
 }
-.more-btn {
-  &.MuiButtonBase-root {
-    color: black;
-    text-transform: capitalize;
-  }
+.more-option-container{
+  height: 56px;
 }
