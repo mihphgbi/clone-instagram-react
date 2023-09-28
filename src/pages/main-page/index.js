@@ -1,5 +1,4 @@
 import React from 'react'
-import {connect} from "react-redux";
 import {Grid} from "@mui/material";
 
 function MainPage () {
@@ -13,5 +12,4 @@ function MainPage () {
         </div>
     )
 }
-const mapStateToProps = (state) => {}
-export default connect (mapStateToProps,{})(MainPage);
+export default MainPage;

@@ -6,6 +6,7 @@ import mes from "../assets/mes-icon.svg"
 import noti from "../assets/like-icon.svg"
 import profile from "../assets/user.svg"
 import create from "../assets/create-icon.svg"
+import more from "../assets/more-icon.svg";
 
 export const NAV_MENU_ITEM = {
     HOME: {
@@ -39,5 +40,9 @@ export const NAV_MENU_ITEM = {
     PROFILE: {
         name: 'Profile',
         image: profile
+    },
+    MORE: {
+        name: 'More',
+        image: more
     }
 }

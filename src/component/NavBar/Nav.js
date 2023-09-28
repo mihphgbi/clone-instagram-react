@@ -1,16 +1,14 @@
 import React, {Fragment, useState} from 'react'
 import {Box, CardMedia, ListItemIcon, ListItemText, MenuItem, MenuList} from "@mui/material";
 import logo from "../../assets/logo.svg";
-import more_icon from "../../assets/more-icon.svg";
 //style
 import './nav-style.scss';
 import {NAV_MENU_ITEM} from "../../constant/nav";
 
 function Nav () {
-    const [selectedItem, setSelectedItem] = useState(false);
-    const handleClick = (value) => {
-        console.log("========")
-        setSelectedItem(value)
+    const [selectedItem, setSelectedItem] = useState('');
+    const handleClick = (name) => {
+        setSelectedItem(name)
     }
     return (
         <Fragment>
@@ -27,7 +25,9 @@ function Nav () {
                 </div>
                 <div className={'menu-container'}>
                     <MenuList className={'menu-wrapper'}>
-                        <MenuItem className={'menu-item'} onClick={handleClick} selected={selectedItem}>
+                        <MenuItem className={'menu-item'}
+                                  onClick={() => handleClick(NAV_MENU_ITEM.HOME.name)}
+                                  selected={selectedItem === NAV_MENU_ITEM.HOME.name}>
                             <ListItemIcon>
                                 <CardMedia title={'Home'}
                                            image={NAV_MENU_ITEM.HOME.image}
@@ -37,7 +37,9 @@ function Nav () {
                             <ListItemText>{NAV_MENU_ITEM.HOME.name}</ListItemText>
                         </MenuItem>
 
-                        <MenuItem className={'menu-item'} onClick={handleClick} selected={selectedItem}>
+                        <MenuItem className={'menu-item'}
+                                  onClick={() => handleClick(NAV_MENU_ITEM.SEARCH.name)}
+                                  selected={selectedItem === NAV_MENU_ITEM.SEARCH.name}>
                             <ListItemIcon>
                                 <CardMedia title={'Search'}
                                            image={NAV_MENU_ITEM.SEARCH.image}
@@ -46,7 +48,9 @@ function Nav () {
                             <ListItemText>{NAV_MENU_ITEM.SEARCH.name}</ListItemText>
                         </MenuItem>
 
-                        <MenuItem className={'menu-item'} onClick={handleClick} selected={selectedItem}>
+                        <MenuItem className={'menu-item'}
+                                  onClick={() => handleClick(NAV_MENU_ITEM.EXPLORE.name)}
+                                  selected={selectedItem === NAV_MENU_ITEM.EXPLORE.name}>
                             <ListItemIcon>
                                 <CardMedia title={'Explore'}
                                            image={NAV_MENU_ITEM.EXPLORE.image}
@@ -56,7 +60,9 @@ function Nav () {
                             <ListItemText>{NAV_MENU_ITEM.EXPLORE.name}</ListItemText>
                         </MenuItem>
 
-                        <MenuItem className={'menu-item'} onClick={handleClick} selected={selectedItem}>
+                        <MenuItem className={'menu-item'}
+                                  onClick={() => handleClick(NAV_MENU_ITEM.REELS.name)}
+                                  selected={selectedItem === NAV_MENU_ITEM.REELS.name}>
                             <ListItemIcon>
                                 <CardMedia title={'Reels'}
                                            image={NAV_MENU_ITEM.REELS.image}
@@ -65,7 +71,9 @@ function Nav () {
                             <ListItemText>{NAV_MENU_ITEM.REELS.name}</ListItemText>
                         </MenuItem>
 
-                        <MenuItem className={'menu-item'} onClick={handleClick} selected={selectedItem}>
+                        <MenuItem className={'menu-item'}
+                                  onClick={() => handleClick(NAV_MENU_ITEM.MESSAGES.name)}
+                                  selected={selectedItem === NAV_MENU_ITEM.MESSAGES.name}>
                             <ListItemIcon>
                                 <CardMedia title={'Messages'}
                                            image={NAV_MENU_ITEM.MESSAGES.image}
@@ -74,7 +82,9 @@ function Nav () {
                             <ListItemText>{NAV_MENU_ITEM.MESSAGES.name}</ListItemText>
                         </MenuItem>
 
-                        <MenuItem className={'menu-item'} onClick={handleClick} selected={selectedItem}>
+                        <MenuItem className={'menu-item'}
+                                  onClick={() => handleClick(NAV_MENU_ITEM.NOTIFICATIONS.name)}
+                                  selected={selectedItem === NAV_MENU_ITEM.NOTIFICATIONS.name}>
                             <ListItemIcon>
                                 <CardMedia title={'Notifications'}
                                            image={NAV_MENU_ITEM.NOTIFICATIONS.image}
@@ -83,7 +93,9 @@ function Nav () {
                             <ListItemText>{NAV_MENU_ITEM.NOTIFICATIONS.name}</ListItemText>
                         </MenuItem>
 
-                        <MenuItem className={'menu-item'} onClick={handleClick} selected={selectedItem}>
+                        <MenuItem className={'menu-item'}
+                                  onClick={() => handleClick(NAV_MENU_ITEM.CREATE.name)}
+                                  selected={selectedItem === NAV_MENU_ITEM.CREATE.name}>
                             <ListItemIcon>
                                 <CardMedia title={'Create'}
                                            image={NAV_MENU_ITEM.CREATE.image}
@@ -92,7 +104,9 @@ function Nav () {
                             <ListItemText>{NAV_MENU_ITEM.CREATE.name}</ListItemText>
                         </MenuItem>
 
-                        <MenuItem className={'menu-item'} onClick={handleClick} selected={selectedItem}>
+                        <MenuItem className={'menu-item'}
+                                  onClick={() => handleClick(NAV_MENU_ITEM.PROFILE.name)}
+                                  selected={selectedItem === NAV_MENU_ITEM.PROFILE.name}>
                             <ListItemIcon>
                                 <CardMedia title={'Profile'}
                                            image={NAV_MENU_ITEM.PROFILE.image}
@@ -104,13 +118,15 @@ function Nav () {
                 </div>
                 <div className={'more-option-container'}>
                     <MenuList className={'menu-wrapper menu-more'}>
-                        <MenuItem className={'menu-item'} onClick={handleClick} selected={selectedItem}>
+                        <MenuItem className={'menu-item'}
+                                  onClick={() => handleClick(NAV_MENU_ITEM.MORE.name)}
+                                  selected={selectedItem === NAV_MENU_ITEM.MORE.name}>
                             <ListItemIcon>
                                 <CardMedia title={'Profile'}
-                                           image={more_icon}
+                                           image={NAV_MENU_ITEM.MORE.image}
                                            className={'menu-icon'}/>
                             </ListItemIcon>
-                            <ListItemText>More</ListItemText>
+                            <ListItemText>{NAV_MENU_ITEM.MORE.name}</ListItemText>
                         </MenuItem>
                     </MenuList>
                 </div>
