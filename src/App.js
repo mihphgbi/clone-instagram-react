@@ -7,6 +7,7 @@ import ErrorPage from "./error-page";
 import {Fragment} from "react";
 import Layout from "./pages/Layout/layout";
 import {URL} from "./constant/url";
+import Explore from "./pages/explore";
 
 function App() {
 
@@ -15,6 +16,7 @@ function App() {
             <Routes>
                 <Route path={'/login'} element={<Login/>}/>
                 <Route path={URL.INDEX_PAGE} element={Layout(MainPage)}/>
+                <Route path={URL.EXPLORE} element={Layout(Explore)}/>
                 <Route path={'*'} element={<ErrorPage/>}/>
             </Routes>
         </Fragment>
