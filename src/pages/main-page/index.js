@@ -1,15 +1,20 @@
-import React from 'react'
+import React, {Fragment} from 'react'
 import {Grid} from "@mui/material";
+import Story from "./story";
+import Newsfeed from "./newsfeed";
 
 function MainPage () {
     return (
-        <div>
+        <Fragment>
             <Grid container>
-                <Grid sx={{border: '1px solid black'}}>
-                    This is test123
+                <Grid item>
+                    <Story/>
+                </Grid>
+                <Grid item>
+                    <Newsfeed/>
                 </Grid>
             </Grid>
-        </div>
+        </Fragment>
     )
 }
 export default MainPage;
